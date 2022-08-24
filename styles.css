@@ -1,0 +1,138 @@
+html,h1,h3,body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+header {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Media */
+@media (max-width: 300px) {
+    main {
+        position: absolute;
+        left: 30%;
+    }
+}
+
+@media (max-width: 800px) {
+    body #navbar {
+        width: 100px;
+    }
+
+    body #navbar header {
+        font-size: 7px;
+        margin-bottom: -10%;
+        padding: 10px 5px 5px 5px;
+    }
+
+    #navbar ul a{
+        font-size: 10px;
+    }
+
+    body main {
+        position: absolute;
+        left: 110px;
+        font-size: 7px;
+    }
+
+    body main #Isi_Pancasila img {
+        width: 30px;
+    }
+
+    body main code {
+        text-align: center;
+    }
+}
+
+/* Navbar */
+
+#navbar {
+    position: fixed;
+    margin: 0;
+    padding: 1.2em auto;
+    max-width: 300px;
+    height: 100vh;
+    background-color: beige;
+    border-right: 2px solid #000;
+    text-align: center;
+}
+
+#navbar header {
+    padding: 2em 1.2em;
+}
+
+#navbar ul li {
+    border-top: 1px solid #000;
+    transition: .2s;
+}
+
+#navbar ul{
+    border-bottom: 1px solid #000;
+}
+
+.nav-link {
+    color: #000;
+    font-size: 24px;
+    line-height: 5em;
+} 
+
+#navbar ul li:hover, .nav-link:hover {
+    background-color: rgb(255, 255, 94);
+    cursor: pointer;
+}
+
+
+/* Main Section */
+section {
+    padding-top: .2%;
+}
+
+.italic {
+    font-style: italic;
+}
+
+main {
+    position: absolute;
+    left: 21%;
+}
+
+main header {
+    margin: 1em 1.2em;
+}
+
+#Isi_Pancasila table td {
+    padding: 0.2em 1.2em;
+}
+
+/* Latar Belakang */
+#Latar_Belakang{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    text-align: center;
+}
+
+#Latar_Belakang header {
+    text-align: left;
+}
+
+#Latar_Belakang img {
+    width: 100%;
+    margin-top: -2%;
+}
+
+#kesimpulan-img img {
+    width: 40%;
+}
