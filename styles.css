@@ -1,138 +1,79 @@
-html,h1,h3,body {
-    margin: 0;
-    padding: 0;
+* {
     scroll-behavior: smooth;
 }
-a {
-    text-decoration: none;
-}
 
-ul {
-    list-style: none;
+body {
+    display: flex; /*untuk semua child elemen yang didalam body*/
+    margin: 0;
     padding: 0;
 }
 
-header {
+main header, nav header {
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
-/* Media */
-@media (max-width: 300px) {
-    main {
-        position: absolute;
-        left: 30%;
-    }
-}
-
-@media (max-width: 800px) {
-    body #navbar {
-        width: 100px;
-    }
-
-    body #navbar header {
-        font-size: 7px;
-        margin-bottom: -10%;
-        padding: 10px 5px 5px 5px;
-    }
-
-    #navbar ul a{
-        font-size: 10px;
-    }
-
-    body main {
-        position: absolute;
-        left: 110px;
-        font-size: 7px;
-    }
-
-    body main #Isi_Pancasila img {
-        width: 30px;
-    }
-
-    body main code {
-        text-align: center;
-    }
-}
-
-/* Navbar */
-
-#navbar {
-    position: fixed;
-    margin: 0;
-    padding: 1.2em auto;
-    max-width: 300px;
-    height: 100vh;
-    background-color: beige;
+/* NAV */
+nav {
     border-right: 2px solid #000;
-    text-align: center;
+    width: 500px;
+
 }
 
-#navbar header {
-    padding: 2em 1.2em;
+nav header {
+    padding-left: 10px;
 }
 
-#navbar ul li {
-    border-top: 1px solid #000;
-    transition: .2s;
-}
-
-#navbar ul{
-    border-bottom: 1px solid #000;
-}
-
-.nav-link {
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    border-top: 2px solid #000;
     color: #000;
-    font-size: 24px;
-    line-height: 5em;
-} 
+    transition: .3s;
+}
 
-#navbar ul li:hover, .nav-link:hover {
-    background-color: rgb(255, 255, 94);
-    cursor: pointer;
+nav a:hover {
+    background-color: #f7ecb5;
+    font-size: larger;
 }
 
 
-/* Main Section */
-section {
-    padding-top: .2%;
-}
-
-.italic {
-    font-style: italic;
-}
-
+/* MAIN */
 main {
-    position: absolute;
-    left: 21%;
+    height: 100vh;
+    overflow-y: scroll;
+    /* Membuat scroll tapi layar kiri tetap fixed */
+    padding: 0 1em;
 }
 
 main header {
-    margin: 1em 1.2em;
+    padding: 1%;
 }
 
-#Isi_Pancasila table td {
-    padding: 0.2em 1.2em;
-}
-
-/* Latar Belakang */
-#Latar_Belakang{
+main img {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    flex-direction: column;
-    text-align: center;
 }
 
-#Latar_Belakang header {
-    text-align: left;
-}
+/* MEDIA */
+@media (max-width: 576px) {
+    body {
+        flex-direction: column;
+    }
 
-#Latar_Belakang img {
-    width: 100%;
-    margin-top: -2%;
-}
+    nav {
+        border: 1px solid #000;
+        overflow-y: scroll;
+        height: 300px;
+        width: 100%;
+    }
 
-#kesimpulan-img img {
-    width: 40%;
+    main {
+        overflow-y: unset;
+    }
+
+    img {
+        width: 70%;
+    }
 }
